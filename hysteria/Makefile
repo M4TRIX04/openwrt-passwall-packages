@@ -4,7 +4,7 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=hysteria
+PKG_NAME:=hysteria2
 PKG_VERSION:=2.7.0
 PKG_RELEASE:=1
 
@@ -33,7 +33,7 @@ GO_PKG_LDFLAGS_X = \
 include $(INCLUDE_DIR)/package.mk
 include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk
 
-define Package/hysteria
+define Package/hysteria2
   SECTION:=net
   CATEGORY:=Network
   TITLE:=A feature-packed network utility optimized for networks of poor quality
