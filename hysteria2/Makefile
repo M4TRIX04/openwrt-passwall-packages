@@ -41,19 +41,19 @@ define Package/hysteria2
   DEPENDS:=$(GO_ARCH_DEPENDS) +ca-bundle
 endef
 
-define Package/hysteria/description
+define Package/hysteria2/description
   Hysteria is a feature-packed network utility optimized for networks
   of poor quality (e.g. satellite connections, congested public Wi-Fi,
   connecting from China to servers abroad) powered by a custom version
   of QUIC protocol.
 endef
 
-define Package/hysteria/install
+define Package/hysteria2/install
 	$(call GoPackage/Package/Install/Bin,$(PKG_INSTALL_DIR))
 
 	$(INSTALL_DIR) $(1)/usr/bin/
-	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/app $(1)/usr/bin/hysteria
+	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/app $(1)/usr/bin/hysteria2
 endef
 
-$(eval $(call GoBinPackage,hysteria))
-$(eval $(call BuildPackage,hysteria))
+$(eval $(call GoBinPackage,hysteria2))
+$(eval $(call BuildPackage,hysteria2))
